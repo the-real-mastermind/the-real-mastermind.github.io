@@ -1,2 +1,2 @@
 # the-real-mastermind.github.io
-Website
+Website for hosting things
