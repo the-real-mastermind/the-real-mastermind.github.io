@@ -40,6 +40,8 @@ a{
   height: 100%;
   border-radius: 1vh;
 }
+
+
 .project-text {
   position: absolute;
   font-size: 2vh;
@@ -57,7 +59,7 @@ a{
   transform: translate(0, -10px);
 }
 
-.project-text:hover .project-contents-text {
+.project-text:hover .project-contents-text{
   transform: translate(0, 10px);
 }
 
