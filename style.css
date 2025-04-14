@@ -30,6 +30,9 @@ footer {
 #Duck:hover {
   cursor: pointer;
 }
+a{
+  text-decoration: none;
+}
 
 .image-project {
   background-size: 100%;
