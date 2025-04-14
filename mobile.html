@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Mastermind</title>
+  <link rel="icon" type="image/x-icon" href="../Favicon/favi.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Silkscreen', sans-serif;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 7vh;
+      background-color: rgba(51, 51, 51, 0);
+      z-index: 2;
+    }
+
+    .nav-link h1 {
+      font-size: clamp(18px, 3vw, 32px);
+      color: white;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: clamp(24px, 5vw, 100px);
+    }
+
+
+    .section-blue {
+      background: rgb(30, 127, 255);
+      background-image: url(Images/bkg/plainwater.png);
+      background-size: 9%;
+      padding: 100px 20px;
+    }
+
+    .section-blue h1 {
+      max-width: 800px;
+      margin: auto;
+      font-size: clamp(18px, 2.5vw, 28px);
+    }
+
+    .section-green {
+      background: rgb(13, 71, 21);
+      background-image: url(Images/bkg/DarkGrass.png);
+      background-size: contain;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    #ProjectContentText {
+      text-align: center;
+      font-size: clamp(16px, 2vw, 24px);
+      margin-bottom: 2rem;
+    }
+
+    .projects-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .projects-content {
+      background-color: red;
+      width: 90%;
+      max-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .projects-content .image-project {
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+    }
+
+    .project-text {
+      padding: 10px;
+      background: rgba(0,0,0,0.4);
+      color: white;
+      text-align: center;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    @media (min-width: 768px) {
+      .projects-content {
+        width: 28%;
+      }
+    }
+
+    .merge-banner-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .merge-banner {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: url(Images/bkg/merge.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: 1;
+    }
+
+
+  </style>
+</head>
+
+<body style="background-image: url(Images/bkg/grass.png);">
+  <!-- NAV BAR -->
+  <div  style=" background-image: url(Images/bkg/RockMerge.png); width: 100%; height:70px; background-size: 150%; transform: scale(-1) translate(0, 0.4vh);"></div>
+
+
+
+
+  <h1 style="margin-top: 100px;">The Mastermind's portfolio</h1>
+
+  <div class="merge-banner-wrapper">
+    <div class="merge-banner"></div>
+  </div>
+  
+
+  <div class="section-blue">
+    <h1>
+      Software development student with over 5 years in C# & Java as well as a decent understanding of the web development trifecta
+    </h1>
+  </div>
+
+  <div class="merge-banner-wrapper">
+    <div style=" position: absolute; top: -10px; left: 0; height: 20px; width: 100%; background-image: url(Images/bkg/DarkMerge.png); background-repeat: no-repeat; background-size: 100%; z-index: 1;"></div>
+</div>
+
+  <div class="section-green">
+    <div id="ProjectContentText">
+      <h1>Here are several projects that I have made over my years as a programmer</h1>
+    </div>
+
+    <div class="projects-wrapper">
+      <!-- Project 1 -->
+      <a href="subPages/UnityGames/TODO" class="projects-content" style="background-color: #e53935;">
+        <div class="image-project" style="background-image: url(Images/Projects/Cave.png);"></div>
+        <div class="project-text">
+          <p>Awaken (In development)</p>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <a href="subPages/UnityGames/TODO" class="projects-content" style="background-color: #43a047;">
+        <div class="image-project" style="background-image: url(Images/Projects/UNO.png);"></div>
+        <div class="project-text">
+          <p>Uno Java</p>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <a href="subPages/UnityGames/Kitchen Combat/Kitchen Combat.html" class="projects-content" style="background-color: #1e88e5;">
+        <div class="image-project" style="background-image: url(Images/Projects/Pirate.PNG);"></div>
+        <div class="project-text">
+          <p>Kitchen Combat</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 The Mastermind. All rights reserved.
+  </footer>
+
+  <script>
+    const duck = document.getElementById("Duck");
+    duck.style.transform = "scaleX(-1)";
+    let position = 0;
+    let direction = 1;
+    const speed = 2;
+
+    function reverseDuck() {
+      direction *= -1;
+      duck.style.transform = `scaleX(${direction})`;
+    }
+
+    function moveDuck() {
+      const maxWidth = window.innerWidth - duck.offsetWidth;
+      position += speed * direction;
+      if (position >= maxWidth || position <= 0) {
+        direction *= -1;
+        duck.style.transform = `scaleX(${direction})`;
+      }
+      duck.style.transform += ` translateX(${position}px)`;
+    }
+
+    setInterval(moveDuck, 10);
+  </script>
+</body>
+</html>
