@@ -108,3 +108,29 @@ h1 {
   font-weight: 700;
   font-style: normal;
 }
+
+
+
+
+ul {
+  font-size: 30px;
+  margin-top: 0px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.slide-in{
+  overflow: hidden;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+li{
+  font-size: 30px;
+}
+
+/* Ensure the transition occurs when scrolling */
+.container {
+  position: relative;
+  overflow: hidden;
+}

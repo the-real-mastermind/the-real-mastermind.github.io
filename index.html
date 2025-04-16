@@ -28,15 +28,15 @@
             <div class="nav-bar" style="opacity: 0%; background-image: url(Images/bkg/RockMerge.png); width: 100%; height: 5.5vh; background-size: 150%; transform: scale(-1) translate(0, 0.4vh);"></div>
         </nav>
 
-        <h1 style="text-align: center; font-size: 100px;">The Mastermind</h1>
+        <h1 style="text-align: center; font-size: 100px; margin-top: 200px;">The Mastermind</h1>
 
-        <div id="Duck" onclick="reverseDuck()" style="margin-top: 5.5vh; z-index: 1; position: absolute; background-image: url(Images/duck.png); width: 300px; height: 244px; background-size: 100%;"></div>
+        <div id="Duck" onclick="reverseDuck()" style="margin-top: 20px; z-index: 1; position: absolute; background-image: url(Images/duck.png); width: 300px; height: 244px; background-size: 100%;"></div>
 
-        <div style="background: rgb(30, 127, 255); background-image: url(Images/bkg/plainwater.png); width: 100%; height: 60vh; margin-top: 200px; background-size: 9%;">
+        <div style="background: rgb(30, 127, 255); background-image: url(Images/bkg/plainwater.png); width: 100%; height: 400px; margin-top: 200px; background-size: 9%;">
             <div style="background-image: url(Images/bkg/merge.png); width: 100%; height: 55px; background-size: 150%; background-repeat: no-repeat;"></div>
 
-            <h1 class="text-main" style="padding-top: 150px; margin-bottom: 50px; padding-left: 250px;">
-                Aspiring software developer with 4 years of non-professional programming experience in Unity, C#, Java, HTML5, CSS3, Javascript and Python, as well as a foundational understanding of Object Oriented Programming and web design. 
+            <h1 class="text-main" style="padding-top: 100px; margin-bottom: 50px; padding-left: 250px; ">
+                Aspiring software engineering major with 4+ years of non-professional programming experience in Unity, C#, Java, HTML5, CSS3, Javascript and Python, as well as a foundational understanding of Object Oriented Programming and web design. 
             </h1>
         </div>
 
@@ -45,7 +45,7 @@
 
 
             <div id="ProjectContentText" style="color: white; position: absolute; margin-left: 20px; margin-top: 20px; width: 31vw;">
-                <h1 style="font-size: 1.5vw;">
+                <h1 style="font-size: 1.5vw; ">
                     Here are several projects that I have made over my years as a programmer
                 </h1>
             </div>
@@ -59,7 +59,7 @@
                 <div class="image-project" style="background-image: url(Images/Projects/Cave.png);"></div>
             </div>
             </a>
-
+            
             <!-- Uno project section (replace with something worth using)-->
             <a  href="subPages/UnityGames/TODO">
               <div class="projects-content" style="background-color: red; height: 60vh; width: 20vw; position: absolute; margin-top: 5vh; right: 24vw; border-radius: 1.2vh;">
@@ -78,6 +78,26 @@
               </div>
               <div class="image-project" style="background-image: url(Images/Projects/Pirate.PNG);"></div>
           </div></a>
+        </div>
+
+        <div style="background: rgb(30, 127, 255); background-image: url(Images/bkg/plainwater.png); width: 100%; height: 820px; background-size: 9%;">
+            <div style="background-image: url(Images/bkg/DarkMerge.png); width: 100%; height: 55px; background-size: 150%; background-repeat: no-repeat; transform: scale(-1);"></div>
+
+            <div style="margin-left: 30px; background-color: rgba(0,0,0,0.2); border-radius: 20px; padding: 10px; width: 70%;">
+                <h1 class="slide-in" style="margin-top: 0px; font-size: 40px;">Some hobbies of mine include: </h1>
+                <ul style="font-size: 30px; margin-top: 0px; list-style: none; padding-left: 0; ">
+                    <li class="slide-in">Game development: I enjoy creating and developing video games and experimenting with different game engines and languages</li>
+                    <li class="slide-in">Computer building/hardware: I enjoy building computers as well as tinkering with devices and gadgets for fun in my spare time</li>
+                    <li class="slide-in">Digital art: I like spending some spare time creating drawings of characters that I like as well as creating pixel art for the games I develop </li>
+                    <li class="slide-in">Modding video games: I often enjoy creating mods for several video games </li>
+                    <li class="slide-in">3D printing: I create or download 3D models and turn them into physical objects with my 3D printer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background: rgb(13, 71, 21); width: 100%; height: 80vh; background-size: 150%; background-image: url(Images/bkg/DarkGrass.png); filter: brightness(100%);">
+            <div style="background-image: url(Images/bkg/DarkMerge.png); width: 100%; height: 53px; background-size: 150%; transform: translate(0, -40px); background-repeat:  no-repeat;"></div>
+
         </div>
 
         <footer>
@@ -124,6 +144,18 @@
                 projects[2].style.right = "40vw";
                 document.getElementById("ProjectContentText").style.marginLeft = "-20px";
             }
+            console.log(window.ScrollY)
+            if(window.scrollY > 1000){
+                const items = document.querySelectorAll('.slide-in');
+                items.forEach(item => {
+                    item.style.marginLeft = "0px"
+                });
+             }else{
+                const items = document.querySelectorAll('.slide-in');
+                items.forEach(item => {
+                    item.style.marginLeft = "-100px"
+                });
+             }
 
             console.log(window.scrollY);
         };
@@ -171,5 +203,7 @@
 
         setInterval(animateTitle, 200);
         setInterval(moveDuck, 10);
+
+
     </script>
 </html>
