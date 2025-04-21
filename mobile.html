@@ -13,6 +13,9 @@
       overflow-x: hidden;
     }
 
+    *{
+      transition-duration: 0.2s;
+    }
     nav {
       display: flex;
       justify-content: center;
@@ -173,7 +176,7 @@
       <!-- Project 1 -->
       <a class="projects-content" style="background-color: #800808;" onclick="ShowItem('wake-up-description')">
         <div class="image-project" style="background-image: url(Images/Projects/Cave.png);">
-         <div id="wake-up-description" style="padding: 10px; color: rgba(0,0,0,1); opacity: 0%;">Test</div>
+         <div id="wake-up-description" style="padding: 10px; color: rgb(255, 255, 255); opacity: 0%;">Awaken is a game inspired by the 1990s era of The Legend Of Zelda. It features an extensive overworld with several sub areas  </div>
         </div>
         <div class="project-text">
           <p>Awaken (In development)</p>
@@ -181,16 +184,21 @@
       </a>
 
       <!-- Project 2 -->
-      <a href="subPages/UnityGames/TODO" class="projects-content" style="background-color: #d63f24;">
-        <div class="image-project" style="background-image: url(Images/Projects/UNO.png);"></div>
+      <a class="projects-content" style="background-color: #d63f24;" onclick="ShowItem('uno-description')">
+        <div class="image-project" style="background-image: url(Images/Projects/UNO.png);">
+          <div id="uno-description" style=" padding: 10px; color: rgba(0,0,0,1); opacity: 0%;">Uno java was a project that was made when I was learning the Java Swing library</div>
+        </div>
+        
         <div class="project-text">
           <p>Uno Java</p>
         </div>
       </a>
 
       <!-- Project 3 -->
-      <a href="subPages/UnityGames/Kitchen Combat/Kitchen Combat.html" class="projects-content" style="background-color: #4b8dc7;">
-        <div class="image-project" style="background-image: url(Images/Projects/Pirate.PNG);"></div>
+      <a class="projects-content" style="background-color: #4b8dc7;" onclick="ShowItem('kitchen-combat-description')">
+        <div class="image-project" style="background-image: url(Images/Projects/Pirate.PNG);">
+          <div id="kitchen-combat-description" style="padding: 10px; color: rgba(0,0,0,1); opacity: 0%;">Test</div>
+        </div>
         <div class="project-text">
           <p>Kitchen Combat</p>
         </div>
