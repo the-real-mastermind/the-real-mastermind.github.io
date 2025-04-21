@@ -171,8 +171,10 @@
 
     <div class="projects-wrapper">
       <!-- Project 1 -->
-      <a href="subPages/UnityGames/TODO" class="projects-content" style="background-color: #800808;">
-        <div class="image-project" style="background-image: url(Images/Projects/Cave.png);"></div>
+      <a class="projects-content" style="background-color: #800808;" onclick="ShowItem('wake-up-description')">
+        <div class="image-project" style="background-image: url(Images/Projects/Cave.png);">
+         <div id="wake-up-description" style="padding: 10px; color: rgba(0,0,0,1); opacity: 0%;">Test</div>
+        </div>
         <div class="project-text">
           <p>Awaken (In development)</p>
         </div>
@@ -203,28 +205,16 @@
   </footer>
 
   <script>
-    const duck = document.getElementById("Duck");
-    duck.style.transform = "scaleX(-1)";
-    let position = 0;
-    let direction = 1;
-    const speed = 2;
 
-    function reverseDuck() {
-      direction *= -1;
-      duck.style.transform = `scaleX(${direction})`;
+  function ShowItem(id){
+    console.log(document.getElementById(id).style.opacity)
+
+    if(document.getElementById(id).style.opacity === "0"){
+      document.getElementById(id).style.opacity = "1";
+    }else{
+      document.getElementById(id).style.opacity = "0"
     }
-
-    function moveDuck() {
-      const maxWidth = window.innerWidth - duck.offsetWidth;
-      position += speed * direction;
-      if (position >= maxWidth || position <= 0) {
-        direction *= -1;
-        duck.style.transform = `scaleX(${direction})`;
-      }
-      duck.style.transform += ` translateX(${position}px)`;
-    }
-
-    setInterval(moveDuck, 10);
+  }
   </script>
 </body>
 </html>
