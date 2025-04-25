@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/x-icon" href="../Favicon/favi.ico" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-                        <title>mastermind</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>mastermind</title>
         <script src="script.js"></script>
 
         <!-- Font stuff -->
@@ -13,158 +12,132 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
 
-        <script>
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent)) {
-                window.location.href = 'mobile.html';
-             }
-        </script>
+        <style>
+            * {
+                transition-duration: 0.3s;
+                user-select: none;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            body {
+                color: #000000;
+                background: rgb(92, 163, 92);
+                -webkit-font-smoothing: none;
+                font-family: "Silkscreen", sans-serif;
+                image-rendering: pixelated;
+                background-size: 150%;
+                background-image: url(Images/bkg/grass.png);
+                margin: 0px;
+            }
+
+            footer {
+                padding: 20px 0;
+                background-color: #333;
+                color: white;
+            }
+
+            #Duck:hover {
+                cursor: pointer;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .frosted-glass:hover {
+                opacity: 1;
+                backdrop-filter: blur(10px);
+            }
+
+            .silkscreen-regular,
+            h1 {
+                font-family: "Silkscreen", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .silkscreen-bold {
+                font-family: "Silkscreen", serif;
+                font-weight: 700;
+                font-style: normal;
+            }
+
+            h1 {
+                text-align: center;
+                line-height: 10vh;
+                font-size: 6vw; /* Default to a responsive width-based font size */
+                transition-duration: 0s;
+            }
+
+            /* Media Query for mobile screens */
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 5vh; /* Adjust the font size for smaller screens */
+                }
+            }
+
+            .nav-item{
+                opacity: 100%;
+                z-index: 10;
+                font-size: 1.5vw;
+                margin: 1%;
+                position: fixed;
+                color: black;
+            }
+
+            .nav-item:hover{
+                color: rgb(0, 99, 8);
+                transform: translate(0, -5%);
+            }
+
+            footer {
+                bottom: 0px;
+                width: 100%;
+                z-index: 1;
+                background-image: url(Images/bkg/FooterMerge.png); 
+                height: 5%; 
+                position: fixed; 
+                background-size: 130%; 
+                background-color: rgba(255, 255, 255, 0);
+                background-repeat: no-repeat;
+                opacity: 0%;
+            }
+        </style>
     </head>
 
-    <body onresiz e="fixDuck()">
-        <!-- NAV BAR -->
-        <nav id="top-nav" class="nav-bar" style="z-index: 2; position: fixed; top: 0px; background-color: rgba(51, 51, 51, 0); width: 100%; height: 67px;">
-            <a class="nav-link" href="subPages/About.html"><h1>About</h1></a>
-            <a class="nav-link" href="subPages/Contact.html"><h1>Contact</h1></a>
-            <div class="nav-bar" style="opacity: 0%; background-image: url(Images/bkg/RockMerge.png);position: absolute; top:65px; width: 100%; height: 50px; background-size: 150%; transform: scale(-1)"></div>
+    <body onresize="fixDuck()">
+        <nav id="nav-bar-opacitic" style="opacity: 0%; z-index: 1;background-image: url(Images/bkg/RockMerge.png); height: 15%; width: 100%; position: fixed; background-size: 130%; background-repeat: no-repeat;">
         </nav>
+        <a href="subPages/About.html" class="nav-item">About</a>
+        <a style="left: 7%;" href="subPages/Contact.html" class="nav-item">Contacts</a>
+        <a style="left: 17%;" href="subPages/Projects.html" class="nav-item">Projects</a>
+        <a style="left: 27%;" href="indexOld.html" class="nav-item">Old</a>
 
-        <h1 style="text-align: center; font-size: 100px; margin-top: 200px;">The Mastermind</h1>
 
-        <div id="Duck" onclick="reverseDuck()" style="margin-top: 20px; z-index: 1; position: absolute; background-image: url(Images/duck.png); width: 300px; height: 244px; background-size: 100%;"></div>
-
-        <div style="background: rgb(30, 127, 255); background-image: url(Images/bkg/plainwater.png); width: 100%; height: 400px; margin-top: 200px; background-size: 9%;">
-            <div style="background-image: url(Images/bkg/merge.png); width: 100%; height: 55px; background-size: 150%; background-repeat: no-repeat;"></div>
-
-            <h1 class="text-main" style="padding-top: 100px; margin-bottom: 50px; padding-left: 250px; ">
-                Aspiring software engineering major with 4+ years of non-professional programming experience in Unity, C#, Java, HTML5, CSS3, Javascript and Python, as well as a foundational understanding of Object Oriented Programming and web design. 
-            </h1>
+        <div style="width: 100%; height: 35%; top: 15%; position: absolute;">
+            <h1>The Mastermind</h1>
         </div>
-
-        <div style="background: rgb(13, 71, 21); width: 100%; height: 80vh; background-size: 150%; background-image: url(Images/bkg/DarkGrass.png); filter: brightness(100%);">
-            <div style="background-image: url(Images/bkg/DarkMerge.png); width: 100%; height: 53px; background-size: 150%; transform: translate(0, -40px); background-repeat:  no-repeat;"></div>
-
-
-            <div id="ProjectContentText" style="color: white; position: absolute; margin-left: 20px; margin-top: 20px; width: 31vw;">
-                <h1 style="font-size: 1.5vw; ">
-                    Here are several projects that I have made over my years as a programmer
-                </h1>
-            </div>
-
-            <!-- Awaken section -->
-            <a  href="subPages/UnityGames/TODO">
-              <div class="projects-content" style="background-color: red; height: 60vh; width: 20vw; position: absolute; margin-top: 5vh; right: -2vw; border-radius: 1.2vh;">
-                <div class="frosted-glass project-text">
-                    <p class="project-contents-text">Awaken (In development)</p>
-                </div>
-                <div class="image-project" style="background-image: url(Images/Projects/Cave.png);"></div>
-            </div>
-            </a>
-            
-            <!-- Game Manager section-->
-            <a  href="https://github.com/the-real-mastermind/CustomGameManager">
-              <div class="projects-content" style="background-color: red; height: 60vh; width: 20vw; position: absolute; margin-top: 5vh; right: 24vw; border-radius: 1.2vh;">
-                <div class="frosted-glass project-text">
-                    <p style="color: white;" class="project-contents-text">Game/Application Manager</p>
-                </div>
-                <div class="image-project" style="background-image: url(Images/Projects/GameAppLarge.png);"></div>
-            </div>
-            </a>
-            
-            <!-- Kitchen Combat section-->
-            <a href="subPages/UnityGames/Kitchen Combat/Kitchen Combat.html">
-              <div class="projects-content" style="background-color: rgb(78, 112, 221); height: 60vh; width: 20vw; position: absolute; margin-top: 5vh; right: 46vw; border-radius: 1.2vh;">
-              <div class="frosted-glass project-text">
-                  <p class="project-contents-text">Kitchen Combat</p>
-              </div>
-              <div class="image-project" style="background-image: url(Images/Projects/Pirate.PNG);"></div>
-          </div></a>
+        <div style="height: 80%; background-color: aqua; width: 100%; position: absolute; top: 50%; background-image: url(Images/bkg/plainwater.png);background-size: 8%;">
+            <div style="width: 100%; height: 20%;background-image: url(Images/bkg/merge.png);background-size: 150%;background-repeat: no-repeat;"></div>
+            <div id="Duck" onclick="reverseDuck()" style="margin-top: -8%; transition-duration: 0s; position: absolute; background-image: url(Images/duck.png); width: 16vw; height: 32vh; background-size: 100%; z-index: 3; background-repeat: no-repeat;"></div>
         </div>
-
-        <div style="background: rgb(30, 127, 255); background-image: url(Images/bkg/plainwater.png); width: 100%; height: 820px; background-size: 9%;">
-            <div style="background-image: url(Images/bkg/DarkMerge.png); width: 100%; height: 55px; background-size: 150%; background-repeat: no-repeat; transform: scale(-1);"></div>
-
-            <div style="margin-left: 30px; background-color: rgba(0,0,0,0.2); border-radius: 20px; padding: 10px; width: 70%;">
-                <h1 class="slide-in" style="margin-top: 0px; font-size: 40px;">Some hobbies of mine include: </h1>
-                <ul style="font-size: 30px; margin-top: 0px; list-style: none; padding-left: 0; ">
-                    <li class="slide-in">Game development: I enjoy creating and developing video games and experimenting with different game engines and languages</li>
-                    <li class="slide-in">Computer building/hardware: I enjoy building computers as well as tinkering with devices and gadgets for fun in my spare time</li>
-                    <li class="slide-in">Digital art: I like spending some spare time creating drawings of characters that I like as well as creating pixel art for the games I develop </li>
-                    <li class="slide-in">Modding video games: I often enjoy creating mods for several video games </li>
-                    <li class="slide-in">3D printing: I create or download 3D models and turn them into physical objects with my 3D printer</li>
-                </ul>
-            </div>
-        </div>
-
-        <div style="background: rgb(13, 71, 21); width: 100%; height: 80vh; background-size: 150%; background-image: url(Images/bkg/DarkGrass.png); filter: brightness(100%);">
-            <div style="background-image: url(Images/bkg/DarkMerge.png); width: 100%; height: 53px; background-size: 150%; transform: translate(0, -40px); background-repeat:  no-repeat;"></div>
-            <img style="margin-left: 40%" src="Images/cat-crunch.gif">
-           <h1 style="padding: 20px; text-align: center; color: rgb(255, 255, 255);"> This is Luna Crunchy cat, she is the best cat. Her teeth are an unstopable force of nature. You WILL go subscribe to her and like every single one of her videos. You must now share her with every single person you know:  <a style="color: rgb(0, 183, 255);" href="https://www.youtube.com/@crunchycatLuna">https://www.youtube.com/@crunchycatLuna</a></h1>
-        </div>
-
-        <footer>
-            <div style="background-image: url(Images/bkg/RockMerge.png); width: 100%; height: 5.5vh; background-size: 150%; transform: translate(0, -5vh);"></div>
+        <footer id="footer">
+            <br>
             &copy; 2025 The Mastrmind. All rights reserved.
         </footer>
     </body>
 
     <script>
-        window.onscroll = function (e) {
-
-            var navs = document.getElementsByClassName("nav-bar");
-
-            for (var i = 0; i < navs.length; i++) {
-                if (navs[i].id === "top-nav") {
-                    navs[i].style.background = "rgba(51, 51, 51, 1)";
-                } else {
-                    navs[i].style.opacity = 1;
-                }
-
-                if (window.scrollY < 100) {
-                    if (navs[i].tagName === "NAV") {
-                        navs[i].style.background = "rgba(51, 51, 51, 0)";
-                    } else {
-                        navs[i].style.opacity = 0;
-                    }
-                }
-            }
-
-            var projects = document.getElementsByClassName("projects-content");
-
-            if (window.scrollY > 200) {
-                console.log(projects);
-                projects[0].style.right = "2vw";
-                projects[1].style.right = "24vw";
-                projects[2].style.right = "46vw";
-                document.getElementById("ProjectContentText").style.marginLeft = "20px";
-            } else {
-                console.log(projects);
-                projects[0].style.right = "-2vw";
-                projects[1].style.right = "20vw";
-                projects[2].style.right = "40vw";
-                document.getElementById("ProjectContentText").style.marginLeft = "-20px";
-            }
-            console.log(window.ScrollY)
-            if(window.scrollY > 1000){
-                const items = document.querySelectorAll('.slide-in');
-                items.forEach(item => {
-                    item.style.marginLeft = "0px"
-                });
-             }else{
-                const items = document.querySelectorAll('.slide-in');
-                items.forEach(item => {
-                    item.style.marginLeft = "-100px"
-                });
-             }
-
-            console.log(window.scrollY);
-        };
-
         const duck = document.getElementById("Duck");
         duck.style.transform = "scaleX(-1)";
         let position = 0;
         let direction = 1;
         const speed = 2;
         var maxWidth = window.innerWidth - duck.offsetWidth;
+        var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 
         function fixDuck() {
             maxWidth = window.innerWidth - duck.offsetWidth;
@@ -179,6 +152,7 @@
                 duck.style.transform = "scaleX(1)";
             }
         }
+
         function moveDuck() {
             position += speed * direction;
 
@@ -203,6 +177,22 @@
         setInterval(animateTitle, 200);
         setInterval(moveDuck, 10);
 
+        window.onscroll = function (e) {
+            var nav = document.getElementById("nav-bar-opacitic");
+            if (window.scrollY > 100) {
+                nav.style.opacity = "100%";
+            } else {
+                nav.style.opacity = "0%";
+            }
 
+            // Check if the user has scrolled to the bottom of the page
+            if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+                document.getElementById("footer").style.opacity = "100%";
+                console.log("max");
+            } else {
+                document.getElementById("footer").style.opacity = "0%";
+                console.log("no max");
+            }
+        }
     </script>
 </html>
