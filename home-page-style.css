@@ -1,0 +1,141 @@
+/* Global Styles */
+* {
+    transition-duration: 0.3s;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    color: #000;
+    background: rgb(90, 209, 35);
+    background-image: url(Images/bkg/grass.png);
+    background-size: 150%;
+    font-family: "Silkscreen", sans-serif;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+#nav-bar-opacitic {
+    opacity: 0%;
+    z-index: 1;
+    background-image: url(Images/bkg/RockMerge.png);
+    height: 15%;
+    width: 100%;
+    position: fixed;
+    background-size: 130%;
+    background-repeat: no-repeat;
+}
+
+.nav-container {
+    position: fixed;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+.nav-item {
+    font-size: 1.5vw;
+    color: black;
+}
+
+.nav-item:first-child {
+    margin-left: 1vw;
+}
+
+.nav-item:hover {
+    color: rgb(0, 99, 8);
+    transform: translate(0, -5%);
+}
+
+/* Title Section */
+.title-container {
+    width: 100%;
+    height: 35%;
+    top: 15%;
+    position: absolute;
+}
+
+h1 {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 6vw;
+    transition-duration: 0s;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 5vh;
+    }
+}
+
+/* Main Content */
+.main-content {
+    height: 80%;
+    background-color: aqua;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    background-image: url(Images/bkg/plainwater.png);
+    background-size: 8%;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+.merge-banner {
+    width: 100%;
+    height: 20%;
+    background-image: url(Images/bkg/merge.png);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    
+}
+
+#Duck {
+    margin-top: -8%;
+    position: absolute;
+    background-image: url(Images/duck.png);
+    width: 16vw;
+    height: 32vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 3;
+    transition-duration: 0s;
+}
+
+#Duck:hover {
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background-image: url(Images/bkg/FooterMerge.png);
+    height: 5%;
+    position: fixed;
+    background-size: 130%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    opacity: 0%;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Frosted Glass (if used elsewhere) */
+.frosted-glass:hover {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+}
