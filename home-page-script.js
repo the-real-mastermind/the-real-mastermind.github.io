@@ -1,37 +1,32 @@
 const duck = document.getElementById("Duck");
 duck.style.transform = "scaleX(-1)";
 
-let position = 0;
+let position = 0; 
 let direction = 1;
-console.log()
-let maxWidth = window.innerWidth - duck.offsetWidth;
-let speed = maxWidth * 0.001;
-
+let speed = 0.1; 
 const originalTitle = "The Mastermind - Home | ";
 let positionTitle = 0;
-
-function fixDuck() {
-    maxWidth = window.innerWidth - duck.offsetWidth;
-    speed = maxWidth * 0.001;
-}
+const maxPos = 85;
 
 function reverseDuck() {
     direction *= -1;
     duck.style.transform = direction === 1 ? "scaleX(-1)" : "scaleX(1)";
+    speed += 0.1;
 }
 
 function moveDuck() {
     position += speed * direction;
-
-    if (position >= maxWidth) {
+    console.log(position)
+    if (position >= maxPos) {
+        position = maxPos;
         direction = -1;
         duck.style.transform = "scaleX(1)";
     } else if (position <= 0) {
+        position = 0;
         direction = 1;
         duck.style.transform = "scaleX(-1)";
     }
-
-    duck.style.left = position + "px";
+    duck.style.left = position + "%";
 }
 
 function animateTitle() {

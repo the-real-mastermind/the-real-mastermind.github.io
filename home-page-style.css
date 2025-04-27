@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     transition-duration: 0.3s;
     user-select: none;
@@ -20,7 +19,6 @@ a {
     color: inherit;
 }
 
-/* Navbar */
 #nav-bar-opacitic {
     opacity: 0%;
     z-index: 1;
@@ -56,12 +54,12 @@ a {
     transform: translate(0, -5%);
 }
 
-/* Title Section */
 .title-container {
     width: 100%;
-    height: 35%;
-    top: 15%;
+    height: 25%;
+    top: 10%;
     position: absolute;
+    z-index: 0;
 }
 
 h1 {
@@ -71,6 +69,12 @@ h1 {
     line-height: 10vh;
     font-size: 6vw;
     transition-duration: 0s;
+    z-index: 0;
+}
+
+h2{
+    font-size: 1vw;
+    transition-duration: 0s;
 }
 
 @media (max-width: 600px) {
@@ -79,13 +83,12 @@ h1 {
     }
 }
 
-/* Main Content */
 .main-content {
     height: 80%;
     background-color: aqua;
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     background-image: url(Images/bkg/plainwater.png);
     background-size: 8%;
     background-repeat: repeat;
@@ -102,12 +105,12 @@ h1 {
 }
 
 #Duck {
-    margin-top: -8%;
+    top: 40%;
     position: absolute;
     background-image: url(Images/duck.png);
     width: 16vw;
     height: 32vh;
-    background-size: 100%;
+    background-size: 15vw ;
     background-repeat: no-repeat;
     z-index: 3;
     transition-duration: 0s;
@@ -117,9 +120,8 @@ h1 {
     cursor: pointer;
 }
 
-/* Footer */
 footer {
-    bottom: 0;
+    bottom: 0%;
     width: 100%;
     z-index: 1;
     background-image: url(Images/bkg/FooterMerge.png);
@@ -130,12 +132,23 @@ footer {
     background-repeat: no-repeat;
     opacity: 0%;
     color: white;
-    padding: 20px 0;
+    padding: 1% 0;
     text-align: center;
 }
 
-/* Frosted Glass (if used elsewhere) */
 .frosted-glass:hover {
     opacity: 1;
     backdrop-filter: blur(10px);
+}
+
+
+.article-text-black{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1%;
+    margin: auto;
+    margin-top: 5%;
+    line-height: 120%;
+    font-size: 2vw;
+    max-width: 80%;
+    text-align: center;
 }
