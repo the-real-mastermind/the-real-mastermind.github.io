@@ -14,6 +14,7 @@ function reverseDuck() {
     speed += 0.1;
 }
 
+
 function moveDuck() {
     position += speed * direction;
     console.log(position)
