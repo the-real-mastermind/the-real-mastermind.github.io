@@ -1,158 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/x-icon" href="../Favicon/favi.ico" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-                        <title>About</title>
-        <link href="../style.css" rel="stylesheet" type="text/css" />
-        <script src="script.js"></script>
-
-        <!-- Font stuff -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
-        <style>
-             /* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #13a100;
-  -webkit-transition: .4s;
-  transition: .4s;
-  
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: rgb(30, 255, 0);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #26530c;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #26530c;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-} 
-        </style>
-<script>
-    function loader(){
-        document.getElementById("SliderRealFake").checked = false;
-    }
-</script>
-    </head>
-
-    <body onresiz e="fixDuck()" onload="loader()">
-        <!-- NAV BAR -->
-        <nav id="top-nav" class="nav-bar" style="z-index: 2; position: fixed; top: 0px; background-color: rgba(51, 51, 51, 0); width: 100%; height: 67px;">
-            <a class="nav-link" href="../index.html"><h1>Home</h1></a>
-            <a class="nav-link" href="../subPages/Contact.html"><h1>Contact</h1></a>
-            <h1 id="TextRealFake" style="position:absolute; right: 80px; top: 0px; margin: 20px;">Fake</h1>
-            <label class="switch" style="position:absolute; right: 0px; top: 0px; margin: 20px;">
-                <input id="SliderRealFake" type="checkbox" onclick="fakeOrReal()">
-                <span class="slider"></span>
-             </label>
-             <div class="nav-bar" style="opacity: 0%; background-image: url(../Images/bkg/RockMerge.png);position: absolute; top:65px; width: 100%; height: 50px; background-size: 150%; transform: scale(-1)"></div>
-            </nav>
-
-        <h1 style="text-align: center; font-size: 100px; margin-top: 200px;">About me</h1>
-
-
-        <div style="background: rgb(30, 127, 255); background-image: url(../Images/bkg/plainwater.png); width: 100%; height: 700%; margin-top: 200px; background-size: 9%;">
-            <div style="background-image: url(../Images/bkg/merge.png); width: 100%; height: 55px; background-size: 150%; background-repeat: no-repeat;"></div>
-
-            <h1 id="about-text" class="text-main" style="padding-top: 100px; margin-bottom: 50px; padding-left: 250px; font-size: 250%; margin: 0px; padding: 40px; ">
-                My name is [REDACTED] I am a software engineering major studying at OCC. I have been into computers since I was but a wee lad, but only REALLY got in-depth into it back in 2020. I taught my self C# through books, youtube videos, and asking on online forums. Several years later I enrolled in a technical school so I could be duel enrolled in Oakland Community College. It was there that I learned JAVA, PYTHON, and the web development trifacta. I also obtained several certifications over those years.
-            </h1>
-        </div>
-        <!--My name is [REDACTED] I am a software engineering major, I am a VERY politically active leftist that believes in an anarchist society. I started programming when I was 12 years old and have been following that dream since then. I have a genuine hatred towards the US and UK governments and plan on fleeing the country as soon as possible. If you are a queerphobe I hope you fall on a LEGO -->
-        <div style="background: rgb(13, 71, 21); width: 100%; height: 500px; background-size: 150%; background-image: url(../Images/bkg/DarkGrass.png); filter: brightness(100%);">
-            <div style="background-image: url(../Images/bkg/DarkMerge.png); width: 100%; height: 53px; background-size: 150%; transform: translate(0, -34px); background-repeat:  no-repeat;"></div>
-
-
-            <div id="ProjectContentText" style="color: white; position: absolute; margin-left: 20px; margin-top: 20px; width: 80%;">
-                <h1 style="font-size: 1.5vw; " id="title-cert-head">
-                    Here are several of the certifications I have obtained:
-                </h1>
-                <ul style="font-size: 30px; margin-top: 0px; list-style: none; padding-left: 0; ">
-                  <li id="cert-one" class="slide-in">IT specialist: JAVA, PYTHON, HTML5 & CSS3, HTML5 APPLICATION AND DEVELOPMENT</li>
-                  <li id="cert-two" class="slide-in">Oracle Java Foundations 1Z0-811</li>
-                  <li id="cert-three" class="slide-in">CIW Advanced HTML5 & CSS3 Specialist</li>
-
-              </ul>
-            </div>  
-        </div>
-        <footer>
-            <div  style=" background-image: url(../Images/bkg/RockMerge.png);position: relative; bottom:60px; width: 100%; height: 50px; background-size: 150%;"></div>
-            &copy; 2025 The Mastrmind. All rights reserved.
-        </footer>
-
-        <script src="navScroll.js"></script>
-        <script>
-            function fakeOrReal(){
-                if(document.getElementById("SliderRealFake").checked){ //Real me
-                    document.getElementById("title-cert-head").innerHTML = "Here are some of the things that I hate with a passion: "
-                    document.getElementById("TextRealFake").innerHTML = "Real"
-                    document.getElementById("about-text").innerHTML = "My name is [REDACTED] I am a software engineering major, I am a VERY politically active leftist that believes in an anarchist society. I started programming when I was 12 years old and have been following that dream since then. I have a genuine hatred towards the US and UK governments and plan on fleeing the country as soon as possible. If you are a queerphobe I hope you fall on a LEGO "
-                    
-                    document.getElementById("cert-one").innerHTML = "I hate any governments, anarchy is a FAR better idea, I hope all capitalists and oligarchs die a slow and painful death"
-                    document.getElementById("cert-two").innerHTML = "I hate any queerphobes (e.g. homophobes, transphobes, etc...) if you are one of those then you have no place in my life and I hope that you burn your soup tomorrow"
-                    document.getElementById("cert-three").innerHTML = "I hate entitled parents and children, your child is not the center of my life. I hope you crash and break all your limbs "
-
-                }else{ //Fake me
-                    document.getElementById("title-cert-head").innerHTML = "Here are several of the certifications I have obtained:"
-                    document.getElementById("TextRealFake").innerHTML = "Fake"
-                    document.getElementById("about-text").innerHTML = "My name is [REDACTED] I am a software engineering major studying at OCC. I have been into computers since I was but a wee lad, but only REALLY got in-depth into it back in 2020. I taught my self C# through books, youtube videos, and asking on online forums. Several years later I enrolled in a technical school so I could be duel enrolled in Oakland Community College. It was there that I learned JAVA, PYTHON, and the web development trifacta. I also obtained several certifications over those years."
-                
-                    document.getElementById("cert-one").innerHTML = "IT specialist: JAVA, PYTHON, HTML5 & CSS3, HTML5 APPLICATION AND DEVELOPMENT"
-                    document.getElementById("cert-two").innerHTML = "Oracle Java Foundations 1Z0-811"
-                    document.getElementById("cert-three").innerHTML = "CIW Advanced HTML5 & CSS3 Specialist"
-                }
-            }
-        </script>
-    </body>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mastermind</title>
+    <link rel="icon" type="image/x-icon" href="../Favicon/favi.ico">
+    <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
     
+    <link rel="stylesheet" href="../home-page-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="../home-page-script.js" defer></script>
+</head>
+
+<body>
+    <nav id="nav-bar-opacitic"></nav>
+
+    <div class="nav-container">
+        <a href="Contact.html" class="nav-item">Contacts</a>
+        <a href="../index.html" class="nav-item">Home</a>
+        <a href="Projects.html" class="nav-item">Projects</a>
+        <a href="Art.html" class="nav-item">Art</a>
+        <a href="../indexOld.html" class="nav-item">Old</a>
+    </div>
+
+    <div class="title-container">
+        <h1>About</h1>
+    </div>
+    <div id="Duck" onclick="reverseDuck()"></div>
+
+
+    <div class="main-content">
+        <div class="merge-banner"></div>
+        <h1 class="article-text-black">Hello! my name is [REDACTED] I am a student living in [LOCATION] studying to be a Software developer. My interests are quite diverse and are listed below. The ways to contact me are listed on my contacts page, and all of my projects are found at the projects page.</h1>
+        <div class="dark-merge-banner"></div>
+
+      </div>
+
+    <div class="secondary-content">
+      <h1 class="article-text-black">Hello! my name is [REDACTED] I am a student living in [LOCATION] studying to be a Software developer. My interests are quite diverse and are listed below. The ways to contact me are listed on my contacts page, and all of my projects are found at the projects page.</h1>
+
+    </div>
+
+    <footer id="footer">
+        <h2>&copy; 2025 The Mastrmind. All rights reserved.</h2>
+    </footer>
+</body>
 </html>

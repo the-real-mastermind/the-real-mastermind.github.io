@@ -1,3 +1,4 @@
+
 const duck = document.getElementById("Duck");
 duck.style.transform = "scaleX(-1)";
 
