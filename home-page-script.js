@@ -18,7 +18,6 @@ function reverseDuck() {
 
 function moveDuck() {
     position += speed * direction;
-    console.log(position)
     if (position >= maxPos) {
         position = maxPos;
         direction = -1;

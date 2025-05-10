@@ -31,12 +31,48 @@
     </div>
     <div id="Duck" onclick="reverseDuck()"></div>
 
-
-    <div class="main-content">
+    <div class="main-content" style="height: 300%;">
         <div class="merge-banner"></div>
-        <h1 class="article-text-black">To be added soon</h1>
+        <h1 class="article-text-black" style="margin-top: -10vw"> 
+            <table style="margin: auto;" id="image-art-table-master"></table> 
+        </h1>
+        
     </div>
 
+    <script>
+
+        var imageCount = 21;
+        var currentImage = 1;
+
+        for (var i = 0; i < imageCount / 3; i++) {
+            var imageTr = document.createElement("tr");
+            document.getElementById("image-art-table-master").appendChild(imageTr);
+
+            for (var j = 0; j < 3 && currentImage <= imageCount; j++) {
+                var tdTemp = document.createElement("td");
+
+                var imageTemp = document.createElement("img");
+                imageTemp.className = "art-image-table";
+                imageTemp.src = "../Images/Art/" + currentImage + ".png";
+                imageTemp.style.opacity = 1;
+
+                // Create a closure or use let to capture the correct image number
+                let imageNumber = currentImage;
+                imageTemp.addEventListener("click", function () {
+                    OpenFile(imageNumber);
+                });
+
+                tdTemp.appendChild(imageTemp);
+                imageTr.appendChild(tdTemp);
+                currentImage++;
+            }
+        }
+
+        function OpenFile(file) {
+            window.location = "../Images/Art/" + file + ".png";
+        }
+
+    </script>
     <footer id="footer">
         <h2>&copy; 2025 The Mastrmind. All rights reserved (This website is a work in progress)</h2>
     </footer>
