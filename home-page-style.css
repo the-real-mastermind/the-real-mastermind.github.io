@@ -79,6 +79,9 @@ h1 {
     z-index: 0;
 }
 
+p{
+        font-size: 1.5vw;
+}
 h2{
     font-size: 1vw;
     transition-duration: 0s;
@@ -148,6 +151,11 @@ h2{
 .art-image-table:hover{
     cursor: pointer;
     transform: translate(0, -0.3vw);
+}
+
+.project-image{
+    height: 30vw;
+    transition-duration: 0ms;
 }
 
 #Duck {
