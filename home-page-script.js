@@ -7,12 +7,19 @@ let direction = 1;
 let speed = 0.1; 
 const originalTitle = "The Mastermind - Home | ";
 let positionTitle = 0;
-const maxPos = 85;
-
+let maxPos = 85;
+let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent)
+    
+if(isMobile){
+    maxPos = 60
+    speed = 0.5
+}
 function reverseDuck() {
-    direction *= -1;
-    duck.style.transform = direction === 1 ? "scaleX(-1)" : "scaleX(1)";
-    speed += 0.1;
+    if(!isMobile){
+        direction *= -1;
+        duck.style.transform = direction === 1 ? "scaleX(-1)" : "scaleX(1)";
+        speed += 0.1;
+    }
 }
 
 
@@ -36,21 +43,21 @@ function animateTitle() {
 }
 
 window.onscroll = function () {
-    const nav = document.getElementById("nav-bar-opacitic");
-    const footer = document.getElementById("footer");
+    if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent)){
+        const nav = document.getElementById("nav-bar-opacitic");
+        const footer = document.getElementById("footer");
 
-    if (window.scrollY > 100) {
-        nav.style.opacity = "100%";
-    } else {
-        nav.style.opacity = "0%";
-    }
+        if (window.scrollY > 100) {
+            nav.style.opacity = "100%";
+        } else {
+            nav.style.opacity = "0%";
+        }
 
-    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-        footer.style.opacity = "100%";
-        console.log("Reached bottom");
-    } else {
-        footer.style.opacity = "0%";
-        console.log("Not at bottom");
+        if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+            footer.style.opacity = "100%";
+        } else {
+            footer.style.opacity = "0%";
+        }
     }
 };
 
