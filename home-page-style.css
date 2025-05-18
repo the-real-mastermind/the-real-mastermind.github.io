@@ -207,8 +207,16 @@ footer {
     display: none;
 }
 
+#main-content-art{
+    height: 300%;
+}
 
-@media (max-width : 400px) {
+#main-content-projects{
+    height: 600%;
+}
+
+
+@media (max-width : 600px) {
 
     #mobile-notice{
         display: block;
@@ -220,6 +228,7 @@ footer {
 
     .article-text-black{
         font-size: 5vw;
+        padding: 0%;
     }
 
     .title-container {
@@ -232,4 +241,38 @@ footer {
         background-size: 40vw ;
     }
 
+   
+    #main-content-art{
+        height: 120%;
+    }
+
+     #main-content-projects{
+        height: 120%;
+    }
+
+    .art-image-table{
+        margin: -1%;
+        height: 25vw;
+        width:25vw;
+    }
+
+    #main-content-projects{
+        height: 200%;
+    }
+
+    p{
+        font-size: 4vw;
+    }
+
+    .project-image{
+        height: 90%;
+        width: 90%;
+        transition-duration: 0ms;
+    }
+
+    .contacts-text{
+        font-size: 4vw;
+    }
+
+    
 }

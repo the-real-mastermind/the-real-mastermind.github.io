@@ -13,6 +13,11 @@ let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.t
 if(isMobile){
     maxPos = 60
     speed = 0.5
+}else{
+    let items = Array.from(document.getElementsByClassName("mobile-spacer"));
+    for (let i = 0; i < items.length; i++) {
+        items[i].remove();
+    }
 }
 function reverseDuck() {
     if(!isMobile){
