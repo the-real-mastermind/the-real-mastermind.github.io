@@ -218,6 +218,9 @@ footer {
 
 @media (max-width : 600px) {
 
+    .main-content{
+         height: 100%;
+    }
     #mobile-notice{
         display: block;
     }
@@ -247,7 +250,7 @@ footer {
     }
 
      #main-content-projects{
-        height: 160%;
+        height: 180%;
     }
 
     .art-image-table{
