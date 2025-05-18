@@ -20,11 +20,9 @@ if(isMobile){
     }
 }
 function reverseDuck() {
-    if(!isMobile){
-        direction *= -1;
-        duck.style.transform = direction === 1 ? "scaleX(-1)" : "scaleX(1)";
-        speed += 0.1;
-    }
+    direction *= -1;
+    duck.style.transform = direction === 1 ? "scaleX(-1)" : "scaleX(1)";
+    speed += 0.1;
 }
 
 
