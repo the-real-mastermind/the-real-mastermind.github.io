@@ -1,8 +1,10 @@
+/* Universal */
 * {
     transition-duration: 0.3s;
     user-select: none;
 }
 
+/* Base Elements */
 body {
     margin: 0;
     color: #000;
@@ -14,54 +16,9 @@ body {
     -webkit-font-smoothing: none;
 }
 
-
 a {
     text-decoration: none;
     color: inherit;
-}
-
-#nav-bar-opacitic {
-    opacity: 0%;
-    z-index: 2;
-    background-image: url(Images/bkg/RockMerge.png);
-    height: 15%;
-    width: 100%;
-    position: fixed;
-    background-size: 130%;
-    background-repeat: no-repeat;
-}
-
-.nav-container {
-    position: fixed;
-    top: 2%;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    z-index: 10;
-}
-
-.nav-item {
-    font-size: 1.5vw;
-    color: black;
-}
-
-
-.nav-item:first-child {
-    margin-left: 1vw;
-}
-
-.nav-item:hover {
-    color: rgb(0, 99, 8);
-    transform: translate(0, -5%);
-}
-
-.title-container {
-    width: 100%;
-    height: 25%;
-    top: 10%;
-    position: absolute;
-    z-index: 0;
 }
 
 h1 {
@@ -74,18 +31,48 @@ h1 {
     z-index: 0;
 }
 
-p{
-        font-size: 1.5vw;
-}
-h2{
+h2 {
     font-size: 1vw;
     transition-duration: 0s;
 }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 5vh;
-    }
+p {
+    font-size: 1.5vw;
+}
+
+footer {
+    bottom: 0%;
+    width: 100%;
+    z-index: 1;
+    background-image: url(Images/bkg/FooterMerge.png);
+    height: 5%;
+    position: fixed;
+    background-size: 130%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    opacity: 0%;
+    color: white;
+    padding: 1% 0;
+    text-align: center;
+}
+
+/* Layout Containers */
+.nav-container {
+    position: fixed;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+.title-container {
+    width: 100%;
+    height: 25%;
+    top: 10%;
+    position: absolute;
+    z-index: 0;
 }
 
 .main-content {
@@ -112,14 +99,13 @@ h2{
     overflow: hidden;
 }
 
-
+/* Banners */
 .merge-banner {
     width: 100%;
     height: 20%;
     background-image: url(Images/bkg/merge.png);
     background-size: 150%;
     background-repeat: no-repeat;
-    
 }
 
 .dark-merge-banner {
@@ -131,36 +117,16 @@ h2{
     background-image: url(Images/bkg/DarkMerge.png);
     background-size: 150%;
     background-repeat: no-repeat;
-    
 }
 
-.art-image-table{
-    transition-duration: 0;
-    margin: -1%;
-    height: 15vw;
-    overflow: scroll;
-    width:15vw;
-    padding: 0.1vw;
-    object-fit: cover;
-}
-.art-image-table:hover{
-    cursor: pointer;
-    transform: translate(0, -0.3vw);
-}
-
-.project-image{
-    height: 70%;
-    width: 70%;
-    transition-duration: 0ms;
-}
-
+/* ID Selectors */
 #Duck {
     top: 40%;
     position: absolute;
     background-image: url(Images/duck.png);
     width: 16vw;
     height: 32vh;
-    background-size: 15vw ;
+    background-size: 15vw;
     background-repeat: no-repeat;
     z-index: 1;
     transition-duration: 0s;
@@ -170,29 +136,66 @@ h2{
     cursor: pointer;
 }
 
-footer {
-    bottom: 0%;
+#nav-bar-opacitic {
+    opacity: 0%;
+    z-index: 2;
+    background-image: url(Images/bkg/RockMerge.png);
+    height: 15%;
     width: 100%;
-    z-index: 1;
-    background-image: url(Images/bkg/FooterMerge.png);
-    height: 5%;
     position: fixed;
     background-size: 130%;
-    background-color: transparent;
     background-repeat: no-repeat;
-    opacity: 0%;
-    color: white;
-    padding: 1% 0;
-    text-align: center;
 }
 
-.frosted-glass:hover {
-    opacity: 1;
-    backdrop-filter: blur(10px);
+#main-content-art {
+    height: 300%;
 }
 
+#main-content-projects {
+    height: 600%;
+}
 
-.article-text-black{
+#mobile-notice {
+    display: none;
+}
+
+/* Class Selectors */
+.nav-item {
+    font-size: 1.5vw;
+    color: black;
+}
+
+.nav-item:first-child {
+    margin-left: 1vw;
+}
+
+.nav-item:hover {
+    color: rgb(0, 99, 8);
+    transform: translate(0, -5%);
+}
+
+.art-image-table {
+    transition-duration: 0;
+    margin: -1%;
+    height: 15vw;
+    overflow: scroll;
+    width: 15vw;
+    padding: 0.1vw;
+    object-fit: cover;
+}
+
+.art-image-table:hover {
+    cursor: pointer;
+    transform: translate(0, -0.3vw);
+}
+
+.project-image {
+    height: 70%;
+    width: 70%;
+    transition-duration: 0ms;
+}
+
+.article-text-black {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 1%;
     margin: auto;
@@ -203,33 +206,31 @@ footer {
     text-align: center;
 }
 
-#mobile-notice{
-    display: none;
+.frosted-glass:hover {
+    opacity: 1;
+    backdrop-filter: blur(10px);
 }
 
-#main-content-art{
-    height: 300%;
-}
-
-#main-content-projects{
-    height: 600%;
-}
-
-
-@media (max-width : 600px) {
-
-    .main-content{
-         height: 100%;
+/* Media Queries */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 5vh;
     }
-    #mobile-notice{
+
+    .main-content {
+        height: 100%;
+    }
+
+    #mobile-notice {
         display: block;
     }
+
     .nav-item {
         font-size: 4.5vw;
         color: black;
     }
 
-    .article-text-black{
+    .article-text-black {
         font-size: 5vw;
         padding: 0%;
     }
@@ -241,38 +242,34 @@ footer {
     #Duck {
         width: 40vw;
         height: 64vh;
-        background-size: 40vw ;
+        background-size: 40vw;
     }
 
-   
-    #main-content-art{
+    #main-content-art {
         height: 160%;
     }
 
-
-    .art-image-table{
+    .art-image-table {
         margin: -1%;
         height: 25vw;
-        width:25vw;
+        width: 25vw;
     }
 
-    #main-content-projects{
+    #main-content-projects {
         height: 250%;
     }
 
-    p{
+    p {
         font-size: 4vw;
     }
 
-    .project-image{
+    .project-image {
         height: 90%;
         width: 90%;
         transition-duration: 0ms;
     }
 
-    .contacts-text{
+    .contacts-text {
         font-size: 4vw;
     }
-
-    
 }
