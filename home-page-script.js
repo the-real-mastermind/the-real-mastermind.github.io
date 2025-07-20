@@ -1,13 +1,13 @@
 
 const duck = document.getElementById("Duck");
 duck.style.transform = "scaleX(-1)";
-
-let position = 0; 
+let startPos = 2;
+let position = startPos; 
 let direction = 1;
 let speed = 0.1; 
 const originalTitle = "The Mastermind - Home | ";
 let positionTitle = 0;
-let maxPos = 85;
+let maxPos = 83;
 let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent)
     
 if(isMobile){
@@ -32,8 +32,8 @@ function moveDuck() {
         position = maxPos;
         direction = -1;
         duck.style.transform = "scaleX(1)";
-    } else if (position <= 0) {
-        position = 0;
+    } else if (position <= startPos) {
+        position = startPos;
         direction = 1;
         duck.style.transform = "scaleX(-1)";
     }
